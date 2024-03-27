@@ -16,8 +16,8 @@ function App() {
   }, [todoList]);
 
   const resetTodoList = () => {
-    setTodoList([]); // Vide la liste des tâches
-    localStorage.removeItem("todoList"); // Supprime la liste du localStorage
+    setTodoList([]);
+    localStorage.removeItem("todoList");
   };
 
   return (

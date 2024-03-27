@@ -4,11 +4,9 @@ function TaskForm({ todoList, setTodoList }) {
   const [newTodo, setNewTodo] = useState("");
 
   const addTodo = () => {
-    // Utilisez l'état local newTodo plutôt que de lire la valeur directement depuis l'input
     if (newTodo.trim() !== "") {
       const newTodoItem = { id: Date.now(), text: newTodo, completed: false };
       setTodoList([...todoList, newTodoItem]);
-      // Réinitialisez l'état de newTodo pour effacer le champ input
       setNewTodo("");
     }
   };
