@@ -15,10 +15,18 @@ function App() {
     localStorage.setItem("todoList", JSON.stringify(todoList));
   }, [todoList]);
 
+  const resetTodoList = () => {
+    setTodoList([]); // Vide la liste des tâches
+    localStorage.removeItem("todoList"); // Supprime la liste du localStorage
+  };
+
   return (
     <div className="App">
       <h1>Todo List</h1>
       <TaskForm todoList={todoList} setTodoList={setTodoList} />
+      <button onClick={resetTodoList} style={{ marginTop: "20px" }}>
+        Reset Todo List
+      </button>
       <div>
         <button onClick={() => setFilter("Toutes")}>Toutes</button>
         <button onClick={() => setFilter("A faire")}>À faire</button>
