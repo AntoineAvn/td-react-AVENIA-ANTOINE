@@ -24,9 +24,7 @@ function App() {
     <div className="App">
       <h1>Todo List</h1>
       <TaskForm todoList={todoList} setTodoList={setTodoList} />
-      <button onClick={resetTodoList} style={{ marginTop: "20px" }}>
-        Reset Todo List
-      </button>
+      <button onClick={resetTodoList}>Reset Todo List</button>
       <div>
         <button onClick={() => setFilter("Toutes")}>Toutes</button>
         <button onClick={() => setFilter("A faire")}>À faire</button>
